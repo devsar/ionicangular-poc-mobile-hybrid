@@ -1,0 +1,62 @@
+<ion-item no-padding>
+  <div class="tarjeta {{ clase }}">
+    <div class="cabecera">
+      <div class="left">
+        <div class="perfil">
+          <ion-img class="imgPerfil" src="{{datos.image_url}}"></ion-img>
+        </div>
+        <div class="author">
+          <h1> {{ datos.name }} </h1>
+          <h2> {{ datos.tagline }} </h2>
+        </div>
+      </div>
+      <div class="right">
+          <ion-button fill="clear" shape="undefined" size="small" class="contextMenu">
+            <ion-icon slot="icon-only" name="more"></ion-icon>
+          </ion-button>
+      </div>
+    </div>
+    <!-- <div class="imWrapper" @dblclick="megustear()"> -->
+    <!-- <Gesture @onTap="verDoubleTap()" @onPinch="onPinchMove($event)" @onPinchEnd="onPinchEnd($event)" @onTouchEnd="onTouchEnd()" enablePinch> -->
+      <div class="imagen">
+        <ion-img class="imgPrincipal" src="{{datos.image_url}}"></ion-img>
+        <ion-icon class="mielemento oculto animated bounceIn" name="heart"></ion-icon>
+      </div>
+    <!-- </Gesture> -->
+    <!-- </div> -->
+    <div class="bottom">
+      <div class="bottom-left">
+        <ion-button fill="clear" shape="undefined" size="small" (click)="megustear2()">
+          <img *ngIf="!megusteado" src="../assets/icons/ig-like-outline.png"/>
+          <img *ngIf="megusteado" src="../assets/icons/ig-like-fill.png"/>
+        </ion-button>
+        <ion-button fill="clear" shape="undefined" size="small">
+          <img src="../assets/icons/ig-comments.png"/>
+        </ion-button>
+        <ion-button fill="clear" shape="undefined" size="small">
+          <img src="../assets/icons/ig-share.png"/>
+        </ion-button>
+      </div>
+      <div class="bottom-right">
+        <ion-button fill="clear" shape="undefined" size="small" @click="guardar()">
+          <img *ngIf="!guardado" src="../assets/icons/ig-save-outline.png"/>
+          <img *ngIf="guardado" src="../assets/icons/ig-save-fill.png"/>
+        </ion-button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="megustas">
+        <span> {{ datos.ibu }} Me gusta </span>
+      </div>
+      <div class="post-description">
+        <p>
+          <span> {{ datos.contributed_by }} </span>
+          {{ datos.description }}
+        </p>
+      </div>
+      <div class="comentarios">
+          <span>Ver los {{ datos.ebc }} comentarios </span>
+      </div>
+    </div>
+  </div>
+</ion-item>
