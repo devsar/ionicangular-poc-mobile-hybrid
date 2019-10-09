@@ -1,0 +1,38 @@
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+  }
+  .ios .cabecera{
+    padding: 18px 12px 6px 12px;
+  }
+  .cabecera-right,
+  .cabecera-left,
+  .cabecera-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .cabecera-center{
+    flex-grow: 1;
+    width: 100%;
+  }
+  .cabecera-right > :first-child{
+    margin-right: 15px;
+  }
+  .icon-topbar{
+    width: 22px;
+    display: block; 
+    margin: 0;
+  }
+  .icon-topbar.igtv{
+    width: 27px;
+  }
+  .logo{
+    width: auto;
+    height: 25px;
+        margin-bottom: -10px;
+  }
