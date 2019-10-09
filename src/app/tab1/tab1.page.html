@@ -1,5 +1,18 @@
 <app-topbar></app-topbar>
 
 <ion-content>
-   
-</ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+      <app-ig-post *ngFor="let post of posts" [datos]="post"></app-ig-post>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content>
+  
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content> 
