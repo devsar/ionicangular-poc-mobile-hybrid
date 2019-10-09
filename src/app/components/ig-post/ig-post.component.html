@@ -38,7 +38,7 @@
         </ion-button>
       </div>
       <div class="bottom-right">
-        <ion-button fill="clear" shape="undefined" size="small" @click="guardar()">
+        <ion-button fill="clear" shape="undefined" size="small" (click)="guardar()">
           <img *ngIf="!guardado" src="../assets/icons/ig-save-outline.png"/>
           <img *ngIf="guardado" src="../assets/icons/ig-save-fill.png"/>
         </ion-button>
