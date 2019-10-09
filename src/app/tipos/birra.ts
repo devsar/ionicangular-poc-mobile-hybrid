@@ -37,7 +37,7 @@ export interface Birra {
             'unit': string
          }
       };
-      'twist': null
+      'twist': string
    };
    'ingredients': {
       'malt': [
