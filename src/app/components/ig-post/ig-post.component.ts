@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ig-post',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IgPostComponent implements OnInit {
   // La propiedad en donde guardamos toda la data de la API
-  datos;
+  @Input() datos;
   // La clase que le pasamos a cada tarjeta de post para poder identificar su MG
   clase: string = 'tar' + this.datos.id;
 
