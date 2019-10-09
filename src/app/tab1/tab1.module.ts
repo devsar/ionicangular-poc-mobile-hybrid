@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
+import { IgPostComponent } from '../components/ig-post/ig-post.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { Tab1Page } from './tab1.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page, IgPostComponent]
 })
 export class Tab1PageModule {}
