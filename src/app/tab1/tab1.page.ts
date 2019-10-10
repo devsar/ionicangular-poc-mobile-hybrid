@@ -1,33 +1,52 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
-
-
+import { FetchApiService } from '../services/fetch-api.service';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
-  @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
+export class Tab1Page implements OnInit {
+  items = [];
 
   paginaActual = 0;
   articulosDescargados = 0;
   articulosPorPagina = 10;
-  posts: [];
+  posts: any[] = [];
 
-  constructor() {}
+  doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
 
-  bajarData() {
-    // make a GET Request to the questions list endpoint and populate the questions array
-    let endpoint = this.crearEndpoint();
-    if (this.next) {
-        endpoint = this.next;
-    }
-    // this.loadingQuestions = true;
-    apiService(endpoint).then(data => {
-        this.posts.push(...data);
-    });
+    setTimeout(() => {
+      for (let i = 0; i < 30; i++) {
+        this.items.push( this.items.length );
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.target.complete();
+    }, 500);
   }
+
+  constructor(private faService: FetchApiService) {for (let i = 0; i < 30; i++) {
+    this.items.push( this.items.length );
+  }}
+
+  bajarData(): void {
+    this.faService.fetchData(this.crearEndpoint()).subscribe(posts => this.posts.push(...posts));
+  }
+
+  printearPosts() {
+    console.log(this.posts.length);
+    console.log(typeof(this.posts));
+    console.log(this.posts);
+  }
+  printearPost() {
+    console.log(this.posts[0].length);
+    console.log(typeof(this.posts[0]));
+    console.log(this.posts[0]);
+  }
+
   crearEndpoint() {
     this.paginaActual = this.paginaActual + 1;
     this.articulosDescargados = this.paginaActual * this.articulosPorPagina;
@@ -56,26 +75,12 @@ export class Tab1Page {
     }, 500);
   }
 
-  toggleInfiniteScroll() {
+  /*toggleInfiniteScroll() {
     this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
-  }
-
-  doOnScroll(event) {
-    this.bajarData();
-    console.log('Hay: ' + this.posts.length);
-    console.log('Deberian haber: ' + this.articulosDescargados);
-    console.log('Pagina actual: ' + this.paginaActual);
-    console.log('Cant por pagina: ' + this.articulosPorPagina);
-    // event.target.complete();
-
-    // App logic to determine if all data is loaded
-    // and disable the infinite scroll
-    if (this.posts.length === this.articulosDescargados) {
-        event.target.disabled = true;
-    }
-  }
+  }*/
 
   ngOnInit() {
+    console.log('onInit');
     this.bajarData();
   }
 }
