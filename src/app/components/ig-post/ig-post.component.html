@@ -18,7 +18,7 @@
         </div>
         <!-- <div class="imWrapper" @dblclick="megustear()"> -->
         <!-- <Gesture @onTap="verDoubleTap()" @onPinch="onPinchMove($event)" @onPinchEnd="onPinchEnd($event)" @onTouchEnd="onTouchEnd()" enablePinch> -->
-          <div class="imagen">
+          <div class="imagen" (tap)="verDoubleTap()">
             <ion-img class="imgPrincipal" src="{{datos.image_url}}"></ion-img>
             <ion-icon class="mielemento oculto animated bounceIn" name="heart"></ion-icon>
           </div>
