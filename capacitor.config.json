@@ -1,0 +1,7 @@
+{
+  "appId": "com.devsar.protoipo_ionic_angular",
+  "appName": "prototipo-ionic-angular",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
