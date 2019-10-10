@@ -1,10 +1,10 @@
 <app-topbar></app-topbar>
 
 <ion-content>
-
-  <ion-button (click)="printearPosts()"></ion-button>
-  <ion-button (click)="bajarData()"></ion-button>
-  <ion-button (click)="printearPost()"></ion-button>
+ 
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
   <ion-list *ngIf="posts.length">
     <app-ig-post *ngFor="let post of posts" [datos]="post"></app-ig-post>

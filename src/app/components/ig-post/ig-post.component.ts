@@ -10,11 +10,11 @@ export class IgPostComponent implements OnInit {
   @Input() datos;
 
   // La clase que le pasamos a cada tarjeta de post para poder identificar su MG
-  clase: string = 'tar';
+  clase = 'tar';
 
   // Variables para administrar el estado del post
   megusteado = false;
-  guardado = true;
+  guardado = false;
 
   // Contamos los taps para saber cuando activar un doble tap
   taps = 0;
