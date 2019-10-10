@@ -17,7 +17,6 @@ export class FetchApiService {
   constructor(private http: HttpClient) { }
 
   fetchData(url: string): Observable<object[]> {
-    console.log(url);
     return this.http.get<object[]>(url, this.httpOptions);
   }
 

@@ -6,7 +6,10 @@
     padding: 12px;
   }
   .ios .cabecera{
-    padding: 18px 12px 6px 12px;
+    padding: 18px 3px 6px 12px;
+  }
+  .md .cabecera-center{
+    justify-content: flex-start;
   }
   .cabecera-right,
   .cabecera-left,
@@ -21,7 +24,7 @@
     width: 100%;
   }
   .cabecera-right > :first-child{
-    margin-right: 15px;
+    margin-right: 0;
   }
   .icon-topbar{
     width: 22px;
@@ -33,6 +36,12 @@
   }
   .logo{
     width: auto;
+    height: 25px;
+        margin-bottom: -10px;
+  }
+
+  .md .logo{
+    width: 81px;
     height: 25px;
         margin-bottom: -10px;
   }

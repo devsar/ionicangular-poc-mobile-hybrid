@@ -9,4 +9,9 @@ export class Tab2Page {
 
   constructor() {}
 
+  tapeo($tap) {
+    console.log('tap');
+    console.log($tap);
+  }
+
 }

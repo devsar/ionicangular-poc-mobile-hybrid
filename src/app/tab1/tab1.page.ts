@@ -43,12 +43,12 @@ export class Tab1Page implements OnInit {
     return 'https://api.punkapi.com/v2/beers?page=' + this.paginaActual + '&per_page=' + this.articulosPorPagina;
   }
 
-  doRefresh() {
+  doRefresh(evento) {
     this.paginaActual = 0;
     this.articulosDescargados = 0;
     this.articulosPorPagina = 10;
     this.posts = [];
-    this.bajarData(null);
+    this.bajarData(evento);
   }
 
   ngOnInit() {
