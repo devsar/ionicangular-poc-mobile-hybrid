@@ -16,35 +16,25 @@ export class Tab1Page implements OnInit {
   posts: any[] = [];
 
   doInfinite(infiniteScroll) {
-    console.log('Begin async operation');
+    this.bajarData(infiniteScroll);
+    if (this.articulosDescargados >= 400) {
+      infiniteScroll.target.disable = true;
+    }
 
-    setTimeout(() => {
-      for (let i = 0; i < 30; i++) {
-        this.items.push( this.items.length );
-      }
-
-      console.log('Async operation has ended');
-      infiniteScroll.target.complete();
-    }, 500);
   }
 
-  constructor(private faService: FetchApiService) {for (let i = 0; i < 30; i++) {
-    this.items.push( this.items.length );
-  }}
+  constructor(private faService: FetchApiService) {}
 
-  bajarData(): void {
-    this.faService.fetchData(this.crearEndpoint()).subscribe(posts => this.posts.push(...posts));
-  }
-
-  printearPosts() {
-    console.log(this.posts.length);
-    console.log(typeof(this.posts));
-    console.log(this.posts);
-  }
-  printearPost() {
-    console.log(this.posts[0].length);
-    console.log(typeof(this.posts[0]));
-    console.log(this.posts[0]);
+  bajarData(infiniteScroll): void {
+    this.faService.fetchData(this.crearEndpoint()).subscribe(
+        posts => {
+          this.posts.push(...posts);
+          if (infiniteScroll != null) {
+            infiniteScroll.target.complete();
+          }
+        }
+      );
+    this.articulosDescargados += this.articulosPorPagina;
   }
 
   crearEndpoint() {
@@ -52,35 +42,16 @@ export class Tab1Page implements OnInit {
     this.articulosDescargados = this.paginaActual * this.articulosPorPagina;
     return 'https://api.punkapi.com/v2/beers?page=' + this.paginaActual + '&per_page=' + this.articulosPorPagina;
   }
+
   doRefresh() {
     this.paginaActual = 0;
     this.articulosDescargados = 0;
-    this.articulosPorPagina = 15;
+    this.articulosPorPagina = 10;
     this.posts = [];
-    this.bajarData();
+    this.bajarData(null);
   }
-
-  loadData(event) {
-    setTimeout(() => {
-      this.doRefresh();
-
-      console.log('Done');
-      event.target.complete();
-
-      // App logic to determine if all data is loaded
-      // and disable the infinite scroll
-      if (this.posts.length === this.articulosDescargados) {
-        event.target.disabled = true;
-      }
-    }, 500);
-  }
-
-  /*toggleInfiniteScroll() {
-    this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
-  }*/
 
   ngOnInit() {
-    console.log('onInit');
-    this.bajarData();
+    this.bajarData(null);
   }
 }

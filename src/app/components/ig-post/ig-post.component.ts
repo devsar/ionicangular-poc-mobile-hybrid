@@ -74,7 +74,6 @@ export class IgPostComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.datos);
     this.clase = 'tar' + this.datos.id;
   }
 
