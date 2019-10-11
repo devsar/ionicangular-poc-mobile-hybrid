@@ -5,9 +5,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { IgPostComponent } from '../components/ig-post/ig-post.component';
-import { TopbarComponent } from '../components/topbar/topbar.component';
 
-import { FetchApiService } from "../services/fetch-api.service";
+import { FetchApiService } from '../services/fetch-api.service';
 @NgModule({
   imports: [
     IonicModule,
@@ -16,6 +15,6 @@ import { FetchApiService } from "../services/fetch-api.service";
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
   providers: [FetchApiService],
-  declarations: [Tab1Page, IgPostComponent, TopbarComponent]
+  declarations: [Tab1Page, IgPostComponent]
 })
 export class Tab1PageModule {}
