@@ -30,4 +30,8 @@ npm-debug.log*
 /plugins
 /www
 /android
+<<<<<<< HEAD
 
+=======
+/ios
+>>>>>>> ef349e67fbe145103e98359edd415a727e4ecd3b
