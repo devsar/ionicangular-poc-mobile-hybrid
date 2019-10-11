@@ -17,7 +17,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any> {
       'pinch': { enable: false },
       'rotate': { enable: false }
-  }
+  };
 }
 
 
