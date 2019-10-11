@@ -48,7 +48,11 @@ export class Tab1Page implements OnInit {
     this.articulosDescargados = 0;
     this.articulosPorPagina = 10;
     this.posts = [];
-    this.bajarData(evento);
+    this.bajarData(null);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      evento.target.complete();
+    }, 1000);
   }
 
   ngOnInit() {

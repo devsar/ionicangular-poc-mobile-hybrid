@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConsoleReporter } from 'jasmine';
 
 @Component({
   selector: 'app-tab2',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
 export class Tab2Page {
 
   constructor() {}
+
+  tapear() {
+    console.log("tapeado");
+  }
+
+  onHammer() {
+    console.log("jamoneado");
+  }
 
 }
