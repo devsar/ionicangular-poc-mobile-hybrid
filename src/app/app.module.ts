@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
+import { EditarperfilModule } from './modules/editarperfil/editarperfil.module';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -26,7 +27,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [AppComponent],
   exports: [],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, SuperTabsModule.forRoot()],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, SuperTabsModule.forRoot(), EditarperfilModule],
   providers: [
     StatusBar,
     SplashScreen,
