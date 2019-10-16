@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab51Page implements OnInit {
 
+  images: string[] = [];
+
   constructor() { }
 
   ngOnInit() {

@@ -18,7 +18,7 @@ export class Tab5Page implements AfterViewInit {
 
   ngAfterViewInit() {
     console.log('Super tabs is ', this.superTabs);
-    this.superTabs.selectTab(1);
+    this.superTabs.selectTab(0);
   }
 
   constructor() {}
