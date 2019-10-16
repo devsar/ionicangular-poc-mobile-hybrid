@@ -1,4 +1,34 @@
 <ion-content class="contenedor">
     <app-topbar-perfil></app-topbar-perfil>
-TAB 5
+    <app-top-perfil></app-top-perfil>
+    <app-perfil></app-perfil>
+
+          <ion-content>
+            <super-tabs>
+              <super-tabs-toolbar slot="top">
+                <super-tab-button>
+                  <ion-icon name="list"></ion-icon>
+                  <ion-label>Feed</ion-label>
+                </super-tab-button>
+                <super-tab-button>
+                  <ion-icon name="person"></ion-icon>
+                  <ion-label>Profile</ion-label>
+                </super-tab-button>
+                <super-tab-button>
+                  <ion-icon name="contacts"></ion-icon>
+                  <ion-label>Contacts</ion-label>
+                </super-tab-button>
+              </super-tabs-toolbar>
+              <super-tabs-container>
+                <super-tab>This is home 1</super-tab>
+                <super-tab>
+                  <ion-nav [root]="tab51Page"></ion-nav>
+                </super-tab>
+                <super-tab>
+                  <ion-nav [root]="tab52Page"></ion-nav>
+                </super-tab>
+              </super-tabs-container>
+            </super-tabs>
+          </ion-content>
+          
 </ion-content>

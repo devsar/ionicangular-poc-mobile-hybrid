@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab4Page } from './tab4.page';
-import { TopbarSharedModule } from '../topbar-shared/topbar-shared.module';
+import { TopbarSharedModule } from '../modules/topbar-shared/topbar-shared.module';
 
 @NgModule({
   imports: [

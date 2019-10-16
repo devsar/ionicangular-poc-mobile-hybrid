@@ -7,7 +7,7 @@ import { Tab1Page } from './tab1.page';
 import { IgPostComponent } from '../components/ig-post/ig-post.component';
 
 import { FetchApiService } from '../services/fetch-api.service';
-import { TopbarSharedModule } from '../topbar-shared/topbar-shared.module';
+import { TopbarSharedModule } from '../modules/topbar-shared/topbar-shared.module';
 
 @NgModule({
   imports: [

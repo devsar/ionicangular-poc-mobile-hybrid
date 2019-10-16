@@ -1,0 +1,97 @@
+.padding {
+    padding: 16px;
+}
+.columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.fila.top {
+    justify-content: space-around;
+}
+.imgPerfil {
+    width: 60px;
+    border-radius: 50%;
+}
+.imgPerfil img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.numeros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.numeros h1 {
+    margin: 0;
+    font-size: 18px;
+}
+.numeros span {
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.fila.middle1 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+.nombre{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+.middle1 p {
+    font-weight: 200;
+    font-size: 11px;
+    margin: 0; 
+}
+.editarPerfil {
+    width: 100%;
+    padding: 6px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+.fila.bottom {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-top: 12px;
+}
+.story {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+}
+.circle {
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+.circle img {
+    border-radius: 50%;
+    border: 1px solid black;
+}
