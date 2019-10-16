@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
-import { TopbarComponent } from './components/topbar/topbar.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -23,7 +22,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 
 
 @NgModule({
-  declarations: [AppComponent, TopbarComponent],
+  declarations: [AppComponent],
+  exports: [],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [

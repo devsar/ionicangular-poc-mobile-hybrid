@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "840104450019",
+    "firebase_url": "https://devsar-ionicangular.firebaseio.com",
+    "project_id": "devsar-ionicangular",
+    "storage_bucket": "devsar-ionicangular.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840104450019:android:631e0fed09840c68bc72d6",
+        "android_client_info": {
+          "package_name": "com.devsar.prototipo.ionic.angular"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840104450019-t398sq8f41onf5g0vq0rdlvm6u7a6nq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkeRkkJ9Wk79CN6RKRU_Om5M06tTyI_nc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840104450019-t398sq8f41onf5g0vq0rdlvm6u7a6nq6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "840104450019-2hdqg96mlq7hid8ripil3gt8ithhvb45.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.devsar.prototipo.ionic.angular"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

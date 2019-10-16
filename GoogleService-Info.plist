@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>840104450019-2hdqg96mlq7hid8ripil3gt8ithhvb45.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.840104450019-2hdqg96mlq7hid8ripil3gt8ithhvb45</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCm4MTVzU4qFgyR0cZmOxXHKc58uMegG5I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>840104450019</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.devsar.prototipo.ionic.angular</string>
+	<key>PROJECT_ID</key>
+	<string>devsar-ionicangular</string>
+	<key>STORAGE_BUCKET</key>
+	<string>devsar-ionicangular.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:840104450019:ios:2bba7d88c56b8165bc72d6</string>
+	<key>DATABASE_URL</key>
+	<string>https://devsar-ionicangular.firebaseio.com</string>
+</dict>
+</plist>
