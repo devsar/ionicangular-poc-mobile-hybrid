@@ -3,10 +3,13 @@
   <div class="columna padding">
     <div class="fila top">
       <div class="columna">
-        <div class="redondo">
+        <div class="redondo" *ngIf="!currentImage">
           <img class="imgPerfilGde" src="../../../assets/perfil.jpeg"/>
         </div>
-        <button class="cambiarFoto">Cambiar foto del perfil</button>
+        <div class="redondo" *ngIf="currentImage">
+          <img class="current" [src]="currentImage">
+        </div>
+        <button (click)="takePicture()" class="cambiarFoto">Cambiar foto del perfil</button>
       </div>
     </div>
     <div class="fila">
