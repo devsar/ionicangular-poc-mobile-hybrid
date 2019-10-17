@@ -1,9 +1,19 @@
+.toolbar-simple {
+  border-bottom: 1px solid #000;
+}
+.list-md {
+  padding: 0;
+}
+.list-md ion-item {
+  border: none !important;
+}
+
 .cabecera{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 12px;
+    padding: 0 12px;
   }
   /*.ios .cabecera{
     padding: 18px 3px 6px 12px;

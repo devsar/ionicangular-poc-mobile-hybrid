@@ -1,3 +1,201 @@
-<p>
-  editarperfil works!
-</p>
+<app-top-editarperfil></app-top-editarperfil>
+<ion-content>
+  <div class="columna padding">
+    <div class="fila top">
+      <div class="columna">
+        <div class="redondo">
+          <img class="imgPerfilGde" src="../../../assets/perfil.jpeg"/>
+        </div>
+        <button class="cambiarFoto">Cambiar foto del perfil</button>
+      </div>
+    </div>
+    <div class="fila">
+      <h6>Texto, numeros, contraseñas e email</h6>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label position="floating">Name</ion-label>
+        <ion-input placeholder="Cesar Vargas"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label position="floating">Username</ion-label>
+        <ion-input placeholder="cesarvargas_21"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label position="floating">Website</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cantidad</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label position="floating">Biografía</ion-label>
+        <ion-input placeholder="No por mucho madrugar se amanece más temprano"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <h6>Fecha y hora</h6>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho"> 
+        <ion-label position="floating">DD/MM/AAAA</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label>D MMM YYYY H:mm</ion-label>
+        <ion-datetime displayFormat="D MMM YYYY H:mm" min="1997" max="2010" value="2005-06-17T11:06Z"></ion-datetime>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <ion-item class="ancho">
+        <ion-label>h:mm a</ion-label>
+        <ion-datetime displayFormat="h:mm a"></ion-datetime>
+      </ion-item>
+    </div>
+    <div class="fila">
+      <h6>Pickers </h6>
+    </div>
+    <div class="fila">
+      <ion-picker-controller>Snap</ion-picker-controller>
+    </div>
+    <div class="fila">
+      <ion-button (click)="openPicker()">Picker de una columna</ion-button>
+    </div>
+    <div class="fila">
+      <ion-button (click)="openPicker(2, 5, multiColumnOptions)">Multi Picker</ion-button>
+    </div>
+    <div class="fila">
+      <h6>Selects simples y múltiples </h6>
+    </div>
+    <div class="fila">
+      <div class="columna">
+        <ion-list class="ancho">
+          <ion-list-header>Seleccionar una opción</ion-list-header>
+        
+          <ion-item>
+            <ion-label>Género</ion-label>
+            <ion-select placeholder="Select One">
+              <ion-select-option value="f">Femenino</ion-select-option>
+              <ion-select-option value="m">Masculino</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Color</ion-label>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="brown">Marron</ion-select-option>
+              <ion-select-option value="blonde">Amarillo</ion-select-option>
+              <ion-select-option value="black">Negro</ion-select-option>
+              <ion-select-option value="red">Rojo</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+        </ion-list>
+
+        <ion-list class="ancho">
+          <ion-list-header>Selección</ion-list-header>
+        
+          <ion-item>
+            <ion-label>Toppings</ion-label>
+            <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+              <ion-select-option value="bacon">Panceta</ion-select-option>
+              <ion-select-option value="olives">Aceitunas negras</ion-select-option>
+              <ion-select-option value="xcheese">Extra quedo</ion-select-option>
+              <ion-select-option value="peppers">Morrón verde</ion-select-option>
+              <ion-select-option value="mushrooms">Hongos</ion-select-option>
+              <ion-select-option value="onions">Cebollas</ion-select-option>
+              <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+              <ion-select-option value="pineapple">Ananá</ion-select-option>
+              <ion-select-option value="sausage">Salsas</ion-select-option>
+              <ion-select-option value="Spinach">Espinaca</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Mascotas</ion-label>
+            <ion-select multiple="true">
+              <ion-select-option value="bird" selected>Pájaro</ion-select-option>
+              <ion-select-option value="cat">Gato</ion-select-option>
+              <ion-select-option value="dog" selected>Perro</ion-select-option>
+              <ion-select-option value="honeybadger">Hamster</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-list class="ancho">
+          <ion-list-header>Objetos como valores (compareWith)</ion-list-header>
+        
+          <ion-item>
+            <ion-label>Usuarios</ion-label>
+            <ion-select [compareWith]="compareWith">
+              <ion-select-option *ngFor="let user of users">{{user.first + ' ' + user.last}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-list class="ancho">
+          <ion-list-header>Diferentes formas de desplegar el select:</ion-list-header>
+        
+          <ion-item>
+            <ion-label>Como alerta</ion-label>
+            <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
+              <ion-select-option value="bacon">Bacon</ion-select-option>
+              <ion-select-option value="olives">Black Olives</ion-select-option>
+              <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
+              <ion-select-option value="peppers">Green Peppers</ion-select-option>
+              <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
+              <ion-select-option value="onions">Onions</ion-select-option>
+              <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+              <ion-select-option value="pineapple">Pineapple</ion-select-option>
+              <ion-select-option value="sausage">Sausage</ion-select-option>
+              <ion-select-option value="Spinach">Spinach</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Como popover</ion-label>
+            <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
+              <ion-select-option value="brown">Brown</ion-select-option>
+              <ion-select-option value="blonde">Blonde</ion-select-option>
+              <ion-select-option value="black">Black</ion-select-option>
+              <ion-select-option value="red">Red</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Como Action Sheet</ion-label>
+            <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+              <ion-select-option value="red">Red</ion-select-option>
+              <ion-select-option value="purple">Purple</ion-select-option>
+              <ion-select-option value="yellow">Yellow</ion-select-option>
+              <ion-select-option value="orange">Orange</ion-select-option>
+              <ion-select-option value="green">Green</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</ion-content>

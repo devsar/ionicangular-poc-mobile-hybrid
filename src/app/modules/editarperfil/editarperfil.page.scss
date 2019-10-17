@@ -1,0 +1,53 @@
+.padding {
+    padding: 16px;
+}
+.columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+ion-item.ancho,
+ion-list.ancho {
+    width: 100%;
+}
+.fila.top {
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.redondo {
+    width: 30%;
+    border-radius: 50%;
+}
+.imgPerfilGde {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.cambiarFoto {
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    color: #387fff;
+    background: transparent;
+    font-weight: bold;
+}
+ion-label {
+    font-size: 10px;
+    --color: red;
+}
+ion-input {
+    font-size: 13px;
+    --color: #000;
+    --placeholder-color: #000;
+    --placeholder-opacity: 1;
+}

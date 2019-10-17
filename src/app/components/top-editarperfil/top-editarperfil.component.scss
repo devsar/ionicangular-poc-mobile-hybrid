@@ -1,0 +1,67 @@
+.toolbar-simple {
+    border-bottom: 1px solid #000;
+  }
+  .list-md {
+    padding: 0;
+  }
+  .list-md ion-item {
+    border: none !important;
+  }
+
+  .toolbar-simple h1 {
+      margin: 0;
+      font-size: 16px;
+      padding-top: 4px;
+  }
+  
+  .cabecera{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 6px 0;
+    }
+    /*.ios .cabecera{
+      padding: 18px 3px 6px 12px;
+    }*/
+    .md .cabecera-center{
+      justify-content: flex-start;
+    }
+    .cabecera-right,
+    .cabecera-left,
+    .cabecera-center{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .cabecera-left {
+        justify-content: flex-start;
+    }
+    .cabecera-center{
+      flex-grow: 1;
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .cabecera-right > :first-child{
+      margin-right: 0;
+    }
+    .icon-topbar{
+      color: #000;
+      display: block; 
+      margin: 0;
+    }
+    .icon-topbar.igtv{
+      width: 27px;
+    }
+    .logo{
+      width: auto;
+      height: 25px;
+          margin-bottom: -10px;
+    }
+  
+    .md .logo{
+      width: 81px;
+      height: 25px;
+          margin-bottom: -10px;
+    }
