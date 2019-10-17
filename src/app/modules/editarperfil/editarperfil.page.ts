@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PickerController } from '@ionic/angular';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @Component({
   selector: 'app-editarperfil',
@@ -7,6 +7,8 @@ import { PickerController } from '@ionic/angular';
   styleUrls: ['./editarperfil.page.scss'],
 })
 export class EditarperfilPage implements OnInit {
+
+  constructor(private camera: Camera) { }
   pickerController = document.querySelector('ion-picker-controller');
 
   defaultColumnOptions = [
@@ -72,9 +74,17 @@ export class EditarperfilPage implements OnInit {
     subHeader: 'Select your favorite color'
   };
 
-  
+  compareWith = this.compareWithFn;
 
-  async openPicker(numColumns = 1, numOptions = 5, columnOptions = this.defaultColumnOptions){
+  currentImage: any;
+
+  currentStyles = {
+    'background-image': 'url(' + this.currentImage + ')',
+  };
+
+
+
+  async openPicker(numColumns = 1, numOptions = 5, columnOptions = this.defaultColumnOptions) {
     const picker = await this.pickerController.create({
       columns: this.getColumns(numColumns, numOptions, columnOptions),
       buttons: [
@@ -95,7 +105,7 @@ export class EditarperfilPage implements OnInit {
 
 
   getColumns(numColumns, numOptions, columnOptions) {
-    let columns = [];
+    const columns = [];
     for (let i = 0; i < numColumns; i++) {
       columns.push({
         name: `col-${i}`,
@@ -107,12 +117,12 @@ export class EditarperfilPage implements OnInit {
 
 
   getColumnOptions(columnIndex, numOptions, columnOptions) {
-    let options = [];
+    const options = [];
     for (let i = 0; i < numOptions; i++) {
       options.push({
         text: columnOptions[columnIndex][i % numOptions],
         value: i
-      })
+      });
     }
     return options;
   }
@@ -125,6 +135,20 @@ export class EditarperfilPage implements OnInit {
     return o1 && o2 ? o1.id === o2.id : o1 === o2;
   }
 
-  compareWith = this.compareWithFn;
+  takePicture() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    };
+
+    this.camera.getPicture(options).then((imageData) => {
+      this.currentImage = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+      // Handle error
+      console.log('Camera issue:' + err);
+    });
+  }
 
 }

@@ -4,7 +4,7 @@ import { EditarperfilPage } from './editarperfil.page';
 import { TopEditarperfilComponent } from 'src/app/components/top-editarperfil/top-editarperfil.component';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { PickerController } from '@ionic/angular';
+import { Camera } from '@ionic-native/camera/ngx';
 
 
 
@@ -16,6 +16,7 @@ import { PickerController } from '@ionic/angular';
     CommonModule,
     RouterModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [Camera]
 })
 export class EditarperfilModule { }

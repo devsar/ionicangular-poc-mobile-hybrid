@@ -25,13 +25,27 @@ ion-list.ancho {
     margin-bottom: 30px;
 }
 .redondo {
-    width: 30%;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .imgPerfilGde {
     border-radius: 50%;
     width: 100%;
+    margin: auto;
+}
+.imgPerfilGde.rec {
+    width: 100%;
     height: 100%;
+    transform: rotateZ(-90deg);
+}
+.current {
+    transform: rotateZ(-90deg);
+    width: 100%;
 }
 .cambiarFoto {
     outline: none;

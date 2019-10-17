@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 import { TopbarSharedModule } from '../modules/topbar-shared/topbar-shared.module';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   imports: [
@@ -12,8 +13,9 @@ import { TopbarSharedModule } from '../modules/topbar-shared/topbar-shared.modul
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
-    TopbarSharedModule
+    TopbarSharedModule,
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page],
+  providers: [Camera]
 })
 export class Tab3PageModule {}
