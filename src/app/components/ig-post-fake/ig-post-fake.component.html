@@ -1,0 +1,61 @@
+<ion-item class="ion-no-padding">
+  <div class="tarjeta">
+      <div class="cabecera">
+        <div class="left" style="flex-grow: 1;">
+          <div class="perfil">
+              <ion-skeleton-text animated style="height: 100%; width: 100%; margin: 0; border-radius: 50%;"></ion-skeleton-text>
+          </div>
+          <div class="author" style="width: 100%; flex-grow: 1;">
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+          </div>
+        </div>
+        <div class="right">
+            <ion-button fill="clear" shape="undefined" size="small" class="contextMenu">
+              <ion-icon slot="icon-only" name="more"></ion-icon>
+            </ion-button>
+        </div>
+      </div>
+      <!-- <div class="imWrapper" @dblclick="megustear()"> -->
+      <!-- <Gesture @onTap="verDoubleTap()" @onPinch="onPinchMove($event)" @onPinchEnd="onPinchEnd($event)" @onTouchEnd="onTouchEnd()" enablePinch> -->
+        <div class="imagen" style="min-height: 80vw">
+            <ion-skeleton-text animated style="width: 100%; height: 100%; min-height: 80vw; margin: 0"></ion-skeleton-text>
+        </div>
+      <!-- </Gesture> -->
+      <!-- </div> -->
+      <div class="bottom">
+        <div class="bottom-left">
+          <ion-button fill="clear" shape="undefined" size="small" (click)="megustear2()">
+            <img src="../assets/icons/ig-like-outline.png"/>
+          </ion-button>
+          <ion-button fill="clear" shape="undefined" size="small">
+            <img src="../assets/icons/ig-comments.png"/>
+          </ion-button>
+          <ion-button fill="clear" shape="undefined" size="small">
+            <img src="../assets/icons/ig-share.png"/>
+          </ion-button>
+        </div>
+        <div class="bottom-right">
+          <ion-button fill="clear" shape="undefined" size="small" (click)="guardar()">
+            <img src="../assets/icons/ig-save-outline.png"/>
+          </ion-button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="megustas" style="width: 100%">
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </div>
+        <div class="post-description" style="width: 100%">
+          <p style="width: 100%">
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+          </p>
+        </div>
+        <div class="comentarios" style="width: 100%">
+          <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+        </div>
+      </div>
+    </div>
+  
+</ion-item>
