@@ -11,6 +11,10 @@ export class EditarperfilPage implements OnInit {
   constructor(private camera: Camera) { }
   pickerController = document.querySelector('ion-picker-controller');
 
+  pepperoni: boolean = false;
+  salsas: boolean = true;
+  hongos: boolean = false;
+
   defaultColumnOptions = [
     [
       'Dog',
@@ -103,6 +107,9 @@ export class EditarperfilPage implements OnInit {
     await picker.present();
   }
 
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
 
   getColumns(numColumns, numOptions, columnOptions) {
     const columns = [];

@@ -200,5 +200,220 @@
         </ion-list>
       </div>
     </div>
+    <div class="fila">
+      <h6>Sliders</h6>
+    </div>
+    <div class="fila">
+        <ion-list class="ancho">
+            <ion-item>
+              <ion-range color="danger" pin="true"></ion-range>
+            </ion-item>
+          
+            <ion-item>
+              <ion-range min="-200" max="200" color="secondary">
+                <ion-label slot="start">-200</ion-label>
+                <ion-label slot="end">200</ion-label>
+              </ion-range>
+            </ion-item>
+          
+            <ion-item>
+              <ion-range min="20" max="80" step="2">
+                <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+                <ion-icon slot="end" name="sunny"></ion-icon>
+              </ion-range>
+            </ion-item>
+          
+            <ion-item>
+              <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
+            </ion-item>
+          
+            <ion-item>
+              <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
+            </ion-item>
+          
+            <ion-item>
+              <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
+            </ion-item>
+          </ion-list>
+    </div>
+    <div class="fila">
+      <h6>Segment controllers</h6>
+    </div>
+    <div class="fila">
+        <ion-list class="ancho">
+          <ion-item>
+            <!-- Default Segment -->
+            <ion-segment (ionChange)="segmentChanged($event)">
+              <ion-segment-button value="friends">
+                <ion-label>Friends</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="enemies">
+                <ion-label>Enemies</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+
+          <ion-item>
+            <!-- Disabled Segment -->
+            <ion-segment (ionChange)="segmentChanged($event)" disabled>
+              <ion-segment-button value="sunny" checked>
+                <ion-label>Sunny</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="rainy">
+                <ion-label>Rainy</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+          
+          <ion-item>
+            <!-- Segment with anchors -->
+            <ion-segment (ionChange)="segmentChanged($event)">
+              <ion-segment-button href="#dogs" value="dogs">
+                <ion-label>Dogs</ion-label>
+              </ion-segment-button>
+              <ion-segment-button href="#cats" value="cats">
+                <ion-label>Cats</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+          
+          <ion-item>
+            <!-- Scrollable Segment -->
+            <ion-segment scrollable>
+              <ion-segment-button>
+                <ion-icon name="home"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button checked>
+                <ion-icon name="heart"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button>
+                <ion-icon name="pin"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button>
+                <ion-icon name="star"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button>
+                <ion-icon name="call"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button>
+                <ion-icon name="globe"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button>
+                <ion-icon name="basket"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+          
+          <ion-item>
+            <!-- Segment with secondary color -->
+            <ion-segment (ionChange)="segmentChanged($event)" color="secondary">
+              <ion-segment-button value="standard">
+                <ion-label>Standard</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="hybrid">
+                <ion-label>Hybrid</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="sat">
+                <ion-label>Satellite</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+
+          <ion-item>
+            <!-- Segment in a toolbar -->
+            <ion-toolbar>
+              <ion-segment (ionChange)="segmentChanged($event)">
+                <ion-segment-button value="camera">
+                  <ion-icon name="camera"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="bookmark">
+                  <ion-icon name="bookmark"></ion-icon>
+                </ion-segment-button>
+              </ion-segment>
+            </ion-toolbar>
+          </ion-item>
+        
+        <ion-item>
+          <!-- Segment with default selection -->
+          <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+            <ion-segment-button value="python">
+              <ion-label>Python</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="javascript">
+              <ion-label>Javascript</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="fila">
+      <h6>Swtiches</h6>
+    </div>
+    <div class="fila">
+      <div class="columna marginada">
+        <!-- Default Toggle -->
+        <ion-toggle></ion-toggle>
+
+        <!-- Disabled Toggle -->
+        <ion-toggle disabled></ion-toggle>
+
+        <!-- Checked Toggle -->
+        <ion-toggle checked></ion-toggle>
+
+        <!-- Toggle Colors -->
+        <ion-toggle color="primary"></ion-toggle>
+        <ion-toggle color="secondary"></ion-toggle>
+        <ion-toggle color="danger"></ion-toggle>
+        <ion-toggle color="light"></ion-toggle>
+        <ion-toggle color="dark"></ion-toggle>
+
+        <!-- Toggles in a List -->
+        <ion-list>
+          <ion-item>
+            <ion-label>Pepperoni</ion-label>
+            <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Salsas</ion-label>
+            <ion-toggle [(ngModel)]="salsas" disabled="true"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Hongos</ion-label>
+            <ion-toggle [(ngModel)]="hongos"></ion-toggle>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+    <div class="fila">
+      <h6>Searchbars</h6>
+    </div>
+    <div class="fila">
+        <ion-searchbar showCancelButton="always"></ion-searchbar>
+    </div>
+    <div class="fila">
+        <ion-searchbar animated></ion-searchbar>
+    </div>
+    <div class="fila">
+      <!-- Default textarea -->
+<ion-textarea class="ancho"></ion-textarea>
+    </div>
+    <div class="fila">
+
+<!-- Textarea in an item with a placeholder -->
+<ion-item class="ancho">
+  <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+</ion-item>
+    </div>
+
+    <div class="fila">
+<!-- Textarea in an item with a floating label -->
+<ion-item class="ancho">
+  <ion-label position="floating">Description</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+    </div>
   </div>
 </ion-content>
